@@ -42,7 +42,7 @@ admin dashboard, email panels, financial application, anywhere where you want us
 
 ### Issues ###
 
-NavLayout uses GitHub's issue tracker for enhancements and bugs. But please do check the Google Group before posting an issue. Also if the support need is urgent you can mail me at nav.ros@gmail.com
+NavLayout uses GitHub's issue tracker for enhancements and bugs. But please do check the GoogleGroup[https://groups.google.com/forum/#!forum/navlayout] before posting an issue. Also if the support need is urgent you can mail me at nav.ros@gmail.com
 
 ### Requirements ###
 
