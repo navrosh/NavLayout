@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- <meta name="viewport" content="width=device-width"> -->
+
+    <title>NavLayout</title>
+
+
+    <link href="css/NavLayout.css" rel="stylesheet">
+    <!--[if lt IE 8]>
+    <link href="themes/ie.css" rel="stylesheet">
+    <![endif]-->
+
+    <style>
+        .nav_container {
+            background: #505050;
+            background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#383838));
+            background: -webkit-linear-gradient(top, #505050, #383838);
+            background: linear-gradient(to bottom, #505050, #383838);
+        }
+
+        .btn {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="_container" style="height:100%;width: 100%;padding: 10px;overflow: hidden;">
+        <div class="nav_container" id="main_container" style="position: relative; height:100%;width:100%;overflow: hidden;">
+
+        </div>
+    </div>
+
+
+    <script src="js/NavLayout.js"></script>
+
+    <script language="javascript" type="text/javascript">
+
+        "object" != typeof JSON && (JSON = {}), function () { "use strict"; var rx_one = /^[\],:{}\s]*$/, rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, rx_three = /"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, rx_four = /(?:^|:|,)(?:\s*\[)+/g, rx_escapable = /[\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, rx_dangerous = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, gap, indent, meta, rep; function f(t) { return t < 10 ? "0" + t : t } function this_value() { return this.valueOf() } function quote(t) { return rx_escapable.lastIndex = 0, rx_escapable.test(t) ? '"' + t.replace(rx_escapable, function (t) { var e = meta[t]; return "string" == typeof e ? e : "\\u" + ("0000" + t.charCodeAt(0).toString(16)).slice(-4) }) + '"' : '"' + t + '"' } function str(t, e) { var r, n, o, u, f, a = gap, i = e[t]; switch (i && "object" == typeof i && "function" == typeof i.toJSON && (i = i.toJSON(t)), "function" == typeof rep && (i = rep.call(e, t, i)), typeof i) { case "string": return quote(i); case "number": return isFinite(i) ? String(i) : "null"; case "boolean": case "null": return String(i); case "object": if (!i) return "null"; if (gap += indent, f = [], "[object Array]" === Object.prototype.toString.apply(i)) { for (u = i.length, r = 0; r < u; r += 1)f[r] = str(r, i) || "null"; return o = 0 === f.length ? "[]" : gap ? "[\n" + gap + f.join(",\n" + gap) + "\n" + a + "]" : "[" + f.join(",") + "]", gap = a, o } if (rep && "object" == typeof rep) for (u = rep.length, r = 0; r < u; r += 1)"string" == typeof rep[r] && (o = str(n = rep[r], i)) && f.push(quote(n) + (gap ? ": " : ":") + o); else for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (o = str(n, i)) && f.push(quote(n) + (gap ? ": " : ":") + o); return o = 0 === f.length ? "{}" : gap ? "{\n" + gap + f.join(",\n" + gap) + "\n" + a + "}" : "{" + f.join(",") + "}", gap = a, o } } "function" != typeof Date.prototype.toJSON && (Date.prototype.toJSON = function () { return isFinite(this.valueOf()) ? this.getUTCFullYear() + "-" + f(this.getUTCMonth() + 1) + "-" + f(this.getUTCDate()) + "T" + f(this.getUTCHours()) + ":" + f(this.getUTCMinutes()) + ":" + f(this.getUTCSeconds()) + "Z" : null }, Boolean.prototype.toJSON = this_value, Number.prototype.toJSON = this_value, String.prototype.toJSON = this_value), "function" != typeof JSON.stringify && (meta = { "\b": "\\b", "\t": "\\t", "\n": "\\n", "\f": "\\f", "\r": "\\r", '"': '\\"', "\\": "\\\\" }, JSON.stringify = function (t, e, r) { var n; if (gap = "", indent = "", "number" == typeof r) for (n = 0; n < r; n += 1)indent += " "; else "string" == typeof r && (indent = r); if (rep = e, e && "function" != typeof e && ("object" != typeof e || "number" != typeof e.length)) throw new Error("JSON.stringify"); return str("", { "": t }) }), "function" != typeof JSON.parse && (JSON.parse = function (text, reviver) { var j; function walk(t, e) { var r, n, o = t[e]; if (o && "object" == typeof o) for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (void 0 !== (n = walk(o, r)) ? o[r] = n : delete o[r]); return reviver.call(t, e, o) } if (text = String(text), rx_dangerous.lastIndex = 0, rx_dangerous.test(text) && (text = text.replace(rx_dangerous, function (t) { return "\\u" + ("0000" + t.charCodeAt(0).toString(16)).slice(-4) })), rx_one.test(text.replace(rx_two, "@").replace(rx_three, "]").replace(rx_four, ""))) return j = eval("(" + text + ")"), "function" == typeof reviver ? walk({ "": j }, "") : j; throw new SyntaxError("JSON.parse") }) }();
+
+        var splitter = null, stack = null;;
+        window.onresize = function (event) {
+            var hgt = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            var wgt = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            document.getElementById('_container').style.height = ((hgt) - 38) + 'px';
+            document.getElementById('_container').style.width = ((wgt) - 38) + 'px';
+            if (splitter) splitter.update();
+        }
+        window.onresize();
+
+        var config = JSON.stringify({
+            spliter: {
+                areaSize: '9px',
+                barSize: '8px'
+            },
+            tabs: {
+                dragLockTime: 150,
+                spacing: '1px'
+            },
+            data: [
+                {
+                    name: '0',
+                    connect: null,
+                    dock: 'bottom',    //top, bottom, left, right , headerLeft, headerRight 
+                    title: '0',
+                    maximize: 'parent',
+                    popout: 'parent',
+                    close: true
+                },
+                {
+                    name: '1',
+                    connect: null,
+                    dock: 'bottom',
+                    title: '1'
+                },
+                {
+                    name: '2',
+                    connect: null,
+                    dock: 'bottom',
+                    title: '2'
+                },
+                {
+                    name: '3',
+                    connect: '1',
+                    dock: 'left',
+                    title: '3'
+                },
+                {
+                    name: '4',
+                    connect: '1',
+                    dock: 'left',
+                    title: '4',
+                    maximize: 'parent',
+                    popout: 'parent',
+                    close: true
+                },
+                {
+                    name: '5',
+                    connect: '1',
+                    dock: 'left',
+                    title: '5'
+                },
+                {
+                    name: '6',
+                    connect: '5',
+                    dock: 'top',
+                    title: '6'
+                },
+                {
+                    name: '7',
+                    connect: '6',
+                    dock: 'top',
+                    title: '7'
+                },
+                {
+                    name: '8',
+                    connect: '1',
+                    dock: 'top',
+                    title: '8'
+                },
+                {
+                    name: '9',
+                    connect: '0',
+                    dock: 'bottom',
+                    title: '9'
+                },
+                {
+                    name: '10',
+                    connect: '9',
+                    dock: 'left',
+                    title: '10',
+                    maximize: false,
+                    close: false,
+                    dockable: true
+                },
+                {
+                    name: '11',
+                    connect: '9',
+                    dock: 'top',
+                    title: '11'
+                },
+                {
+                    name: '12',
+                    connect: '11',
+                    dock: 'left',
+                    title: '12'
+                },
+                {
+                    name: '13',
+                    connect: '3',
+                    dock: 'bottom',
+                    title: '13'
+                },
+                {
+                    name: '14',
+                    connect: '10',
+                    dock: 'right',
+                    title: '14'
+                },
+                {
+                    name: '15',
+                    connect: '14',
+                    dock: 'headerLeft',
+                    title: '15'
+                },
+                {
+                    name: '16',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '16'
+                },
+                {
+                    name: '17',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '17'
+                },
+                {
+                    name: '18',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '18'
+                },
+                {
+                    name: '19',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '19'
+                },
+                {
+                    name: '20',
+                    connect: 14,
+                    dock: 'headerRight',
+                    title: '20'
+                },
+                {
+                    name: '21',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '21'
+                },
+                {
+                    name: '22',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '22'
+                },
+                {
+                    name: '23',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '23'
+                },
+                {
+                    name: '24',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '24'
+                },
+                {
+                    name: '25',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '25'
+                },
+                {
+                    name: '26',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '26'
+                },
+                {
+                    name: '27',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '27',
+                    maximize: 'parent'
+                },
+                {
+                    name: '28',
+                    connect: '14',
+                    dock: 'headerRight',
+                    title: '28'
+                },
+                {
+                    name: '29',
+                    connect: '0',
+                    dock: 'left',
+                    title: '29'
+                },
+                {
+                    name: '30',
+                    connect: '0',
+                    dock: 'left',
+                    title: '30'
+                },
+                {
+                    name: '31',
+                    connect: '29',
+                    dock: 'bottom',
+                    title: '31'
+                },
+            ]
+        });
+
+
+        NavLayout.prototype._nl_replay = function (e) {
+            var _at = [], cidx = 0, eidx = 0;
+
+            // _at.push({ s: "27", t: "24", d: "CR" });
+            // _at.push({ s: "27", t: "-", d: "CR" });
+            // eidx = _at.length;
+
+            _aCBK();
+            function _aCBK() {
+                setTimeout(function () {
+                    if (cidx < eidx) {
+                        console.log(cidx + ' => ' + _at[cidx].s + ', ' + _at[cidx].t + ', ' + _at[cidx].d);
+                        var s = _p.getTab(_at[cidx].s), t = _p.getTab(_at[cidx].t);
+                        _p.detach(s); _p.attach(t, s, _at[cidx].d);
+                        cidx += 1; _aCBK();
+                    }
+                }, 100);
+            }
+        }
+
+        splitter = new NavLayout({ Config: config, ContainerObject: document.getElementById("main_container") });
+
+
+        splitter.on('tabCreated', function (o) {
+            //console.log('tabCreated Event : ' + o);
+            if (o.name == '3') {
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_money" title="money.." ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Custom Event'); });
+                o._e.hd.tab.notif.o.style.border = 'none';
+                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
+                    nl.emit('close', ev, tab);
+                    if (ev.defaultPrevented == false) {
+                        nl.deleteTab(tab);
+                    }
+                });
+            }
+            else if (o.name == '25') {
+                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
+                    nl.emit('close', ev, tab);
+                    if (ev.defaultPrevented == false) {
+                        nl.deleteTab(tab);
+                    }
+                });
+            }
+            else if (o.name == '11') {
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_counter" title="counter" ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Count : ' + obj.innerHTML); });
+                not.innerHTML = 10; setInterval(function () { var cnt = parseInt(not.innerHTML) + 1; if (cnt > 99) cnt = 10; not.innerHTML = cnt; }, 500);
+            }
+            else if (o.name == '8') {
+                o._e.hd.tab.notif.o.style.border = 'none';
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_health" title="health.." ></div>', function (ev, nl, tab, obj) { alert(tab.name); });
+                var opa = 0.0, _m = 1; setInterval(function () { opa = opa + 0.05 * _m; not.style.opacity = opa; not.style.filter = 'alpha(opacity=' + opa * 100 + ")"; not.style.MozOpacity = opa; not.style.KhtmlOpacity = opa; if (opa >= 1) _m = -1; else if (opa <= 0) _m = 1; }, 60);
+            }
+            else if (o.name == "27") {
+                o._e.hd.tab.notif.add('end', '<div class="_notif_bell" title="delivery locations.." ></div>', function (ev, nl, tab, obj) { alert('Kindly post all bugs into google group..'); });
+                o._e.hd.tab.notif.o.style.border = 'none';
+            }
+            else if (o.name == '4') {
+                return;
+                console.log('Creating Stack...');
+                stack = new NavLayout({
+                    Config:
+                        JSON.stringify({
+                            spliter: {
+                                areaSize: '9px',
+                                barSize: '8px'
+                            },
+                            tabs: {
+                                dragLockTime: 150,
+                                spacing: '1px'
+                            },
+                            data: []
+                        })
+                    , ContainerObject: o._e.item
+                });
+                stack.addTab(
+                    [
+                        {
+
+                            name: '32',
+                            connect: null,
+                            dock: 'right',
+                            title: '32'
+                        },
+                        {
+
+                            name: '33',
+                            connect: null,
+                            dock: 'right',
+                            title: '33'
+                        }
+                    ]
+                );
+            }
+        });
+        splitter.on('tabDeleted', function (o) {
+            console.log('tabDeleted Event : ' + o);
+        });
+        splitter.on('hSplitterFocusIn', function (o) {
+            //console.log('hSplitterFocusIn Event : ' + o);
+        });
+        splitter.on('hSplitterFocusOut', function (o) {
+            //console.log('hSplitterFocusOut Event : ' + o);
+        });
+        splitter.on('vSplitterFocusIn', function (o) {
+            //console.log('vSplitterFocusIn Event : ' + o);
+        });
+        splitter.on('vSplitterFocusOut', function (o) {
+            //console.log('vSplitterFocusOut Event : ' + o);
+        });
+        splitter.on('tabFocusIn', function (o) {
+            //console.log('tabFocusIn Event : ' + o);
+        });
+        splitter.on('tabFocusOut', function (o) {
+            //console.log('tabFocusOut Event : ' + o);
+        });
+        splitter.on('hSplitterDragStart', function (e, o) {
+            //console.log('hSplitterDragStart Event : ' + e + ', object:' + o);
+            //e.preventDefault();
+        });
+        splitter.on('vSplitterDragStart', function (e, o) {
+            //console.log('vSplitterDragStart Event : ' + e + ', object:' + o);
+            //e.preventDefault();
+        });
+        splitter.on('hSplitterDragEnd', function (o) {
+            //console.log('hSplitterDragEnd Event : ' + ', object:' + o);
+            //e.preventDefault();
+        });
+        splitter.on('vSplitterDragEnd', function (o) {
+            //console.log('vSplitterDragEnd Event : ' + ', object:' + o);
+            //e.preventDefault();
+        });
+        splitter.on('dragStart', function (e, o) {
+            //console.log('dragStart Event : ' + e + ', name:' + n + ', object:' + o.item);
+            //e.preventDefault();
+        });
+        splitter.on('dragEnd', function (o) {
+            //console.log('dragEnd Event : ' + n + ', object:' + o.item);
+        });
+        splitter.on('resized', function (o) {
+            //console.log('Resized Event : ' + n + ', object:' + o.item);
+            if (stack) stack.update();
+        });
+        splitter.on('popout', function (e, o) {
+            //console.log('Popout Event : ' + e + ', name:' + n + ', object:' + o.item);
+        });
+        splitter.on('minimize', function (e, o) {
+            //console.log('Minimize Event : ' + e + ', name:' + n + ', object:' + o.item);
+        });
+        splitter.on('maximize', function (e, o) {
+            //console.log('Maximize Event : ' + e + ', name:' + n + ', object:' + o.item);
+            //e.preventDefault();
+        });
+        splitter.on('close', function (e, o) {
+            //console.log('Closed Event : ' + e + ', name:' + n + ', object:' + o.item);
+            var r = confirm("Do You Really Want To Close ?");
+            if (r == false) {
+                e.preventDefault();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
