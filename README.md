@@ -24,6 +24,8 @@ admin dashboard, email panels, financial application, anywhere where you want us
 
 * Extremely responsive design
 
+* convert your web design to work like apps
+
 * Easily create your own themes
 
 * Easily save and restore your layout as per your choice like cookie , local storage or a remote server
