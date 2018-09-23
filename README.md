@@ -10,7 +10,7 @@ I was writing my very first commercial plugin and thought about extending the us
 
 My requirements were simple -> a micro/lightweight dockable plugin + it should support every browser + fast + flexible
 
-So, i decided to write my OWN and being as an ordinary c++ developer there was a little learning curve to get used to javascript, and frankly speaking now javascript is my sencond most favourite language after c++. 
+So, i decided to write my OWN and being as an ordinary c++ developer there was a little learning curve to get used to javascript...
 
 I am looking for developers, testers, users feedback to extend the functionalities and bug fixing of navlayout. So, everyone is invited to make your navlayout plugin more usable.
 
