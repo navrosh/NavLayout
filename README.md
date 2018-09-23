@@ -2,6 +2,8 @@
   
 ### NavLayout is a pure javascript based powerful window / grid / dock engine which enables you to go beyond fixed layouts, designed for small size (55 kb), speed & flexibility. ###
 
+![Screenshot](screenshot.png)
+
 Why there was a need to write a plugin if there are already many similar plugins avaliable ? 
 
 Yes this is true that there are multiple dockable plugins like GoldenLayout (my favourite & inspiration), PhosphorJS, wcDocker, dockspawn or more BUT all avaliable plugins are either jquery dependent , bulky or have got limitions. 
