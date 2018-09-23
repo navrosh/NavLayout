@@ -1,6 +1,6 @@
 # NavLayout #  
   
-### NavLayout is a pure javascript based powerful window/dock engine which enables you to go beyond fixed layouts, designed for small size (55 kb), speed & flexibility. ###
+### NavLayout is a pure javascript based powerful window / grid / dock engine which enables you to go beyond fixed layouts, designed for small size (55 kb), speed & flexibility. ###
 
 Why there was a need to write a plugin if there are already many similar plugins avaliable ? 
 
@@ -10,7 +10,7 @@ I was writing my very first commercial plugin and thought about extending the us
 
 My requirements were simple -> a micro/lightweight dockable plugin + it should support every browser + fast + flexible
 
-So, i decided to write my OWN and being as an ordinary c++ developer there was a little learning curve to get used to javascript, and frankly speaking now javascript is my sencond most favourite language after c++. 
+So, i decided to write my OWN and being as an ordinary c++ developer there was a little learning curve to get used to javascript...
 
 I am looking for developers, testers, users feedback to extend the functionalities and bug fixing of navlayout. So, everyone is invited to make your navlayout plugin more usable.
 
@@ -23,6 +23,8 @@ admin dashboard, email panels, financial application, anywhere where you want us
 ### Some Key Points : ###
 
 * Extremely responsive design
+
+* convert your web design to work like apps
 
 * Easily create your own themes
 
@@ -42,7 +44,7 @@ admin dashboard, email panels, financial application, anywhere where you want us
 
 ### Issues ###
 
-NavLayout uses GitHub's issue tracker for enhancements and bugs. But please do check the Google Group before posting an issue. Also if the support need is urgent you can mail me at nav.ros@gmail.com
+NavLayout uses GitHub's issue tracker for enhancements and bugs. But please do check the [GoogleGroup](https://groups.google.com/forum/#!forum/navlayout) before posting an issue. Also if the support need is urgent you can mail me at nav.ros@gmail.com
 
 ### Requirements ###
 
