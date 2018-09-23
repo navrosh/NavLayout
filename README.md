@@ -66,7 +66,151 @@ No external dependencies.
 
 * checking memory leaks / profiling
 
+## Usage ##
+
+### Adding Tabs Using Config ###
+
+       nl = new NavLayout({
+            Config:
+                JSON.stringify({
+                    spliter: {
+                        areaSize: '9px', // Gap between splitter and the tabs
+                        barSize: '8px'
+                    },
+                    tabs: {
+                        dragLockTime: 150,
+                        spacing: '1px'
+                    }
+            data: [
+                  {
+                      name: '0',
+                      connect: null,
+                      dock: 'bottom',    // top, bottom, left, right , headerLeft, headerRight 
+                      title: '0',
+                      maximize: 'parent',
+                      popout: 'parent',
+                      close: true
+                  },
+                  {
+                      name: '1',
+                      connect: null,
+                      dock: 'bottom',
+                      title: '1'
+                  }
+                ]
+            })
+            , ContainerObject: o._e.item
+        });
+          
+### Dynamically Adding Tabs ###
+
+      nl.addTab(
+                [
+                  {
+                      name: '32',
+                      connect: null,
+                      dock: 'right',
+                      title: '32'
+                  },
+                  {
+
+                      name: '33',
+                      connect: null,
+                      dock: 'right',
+                      title: '33'
+                  }
+              ]
+       );
+       
+
+### Deleting Tabs ###
+
+    nl.deleteTab(tab); // tab : name / object
+    
+### Events ###
+    
+    nl.on('tabCreated', function (o) {
+        if (o.name == '1') {
+            o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
+                nl.emit('close', ev, tab);
+                if (ev.defaultPrevented == false) {
+                    nl.deleteTab(tab);
+                }
+            });
+        }
+    });
+    nl.on('tabDeleted', function (o) {
+        console.log('tabDeleted Event : ' + o);
+    });
+    nl.on('hnlFocusIn', function (o) {
+        console.log('hnlFocusIn Event : ' + o);
+    });
+    nl.on('hnlFocusOut', function (o) {
+        console.log('hnlFocusOut Event : ' + o);
+    });
+    nl.on('vnlFocusIn', function (o) {
+        console.log('vnlFocusIn Event : ' + o);
+    });
+    nl.on('vnlFocusOut', function (o) {
+        console.log('vnlFocusOut Event : ' + o);
+    });
+    nl.on('tabFocusIn', function (o) {
+        console.log('tabFocusIn Event : ' + o);
+    });
+    nl.on('tabFocusOut', function (o) {
+        console.log('tabFocusOut Event : ' + o);
+    });
+    nl.on('hnlDragStart', function (e, o) {
+        console.log('hnlDragStart Event : ' + e + ', object:' + o);
+        e.preventDefault();
+    });
+    nl.on('vnlDragStart', function (e, o) {
+        console.log('vnlDragStart Event : ' + e + ', object:' + o);
+        e.preventDefault();
+    });
+    nl.on('hnlDragEnd', function (o) {
+        console.log('hnlDragEnd Event : ' + ', object:' + o);
+        e.preventDefault();
+    });
+    nl.on('vnlDragEnd', function (o) {
+        console.log('vnlDragEnd Event : ' + ', object:' + o);
+        e.preventDefault();
+    });
+    nl.on('dragStart', function (e, o) {
+        console.log('dragStart Event : ' + e + ', name:' + n + ', object:' + o.item);
+        e.preventDefault();
+    });
+    nl.on('dragEnd', function (o) {
+        console.log('dragEnd Event : ' + n + ', object:' + o.item);
+    });
+    nl.on('resized', function (o) {
+        console.log('Resized Event : ' + n + ', object:' + o.item);
+        if (stack) stack.update();
+    });
+    nl.on('popout', function (e, o) {
+        console.log('Popout Event : ' + e + ', name:' + n + ', object:' + o.item);
+    });
+    nl.on('minimize', function (e, o) {
+        console.log('Minimize Event : ' + e + ', name:' + n + ', object:' + o.item);
+    });
+    nl.on('maximize', function (e, o) {
+        console.log('Maximize Event : ' + e + ', name:' + n + ', object:' + o.item);
+        e.preventDefault();
+    });
+    nl.on('layoutChanged', function (setting) {
+        console.log('layoutChanged Event : ' + setting );        
+    });
+    nl.on('close', function (e, o) {
+        console.log('Closed Event : ' + e + ', name:' + n + ', object:' + o.item);
+        var r = confirm("Do You Really Want To Close ?");
+        if (r == false) {
+            e.preventDefault();
+        }
+    });
+    
+   
 ### Documentation ###
 
 Documentation can be found in the doc folder of the project, or you can view it online here.
+
 
