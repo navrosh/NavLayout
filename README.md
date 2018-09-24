@@ -94,7 +94,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 
        nl = new NavLayout({
             Config:
-                JSON.stringify({
+                {
                     spliter: {
                         areaSize: '9px', // Gap between splitter and the tabs
                         barSize: '8px'
@@ -120,7 +120,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
                       title: '1'
                   }
                 ]
-            })
+            }
             , ContainerObject: o._e.item
         });
           
