@@ -1,9 +1,7 @@
-import { assert } from 'chai';
-import NavLayout, { _Function } from '../src';
+import NavLayout from '../src/NavLayout.min.js';
 
-describe('test.', () => {
-  it('should test default function', () => {
-    const expectedVal = 'I am the default _Function'
+describe('test', () => {
+  it('test NavLayout initialization..', () => {
     assert(NavLayout(JSON.stringify({
       spliter: {
         areaSize: '9px',
@@ -24,11 +22,9 @@ describe('test.', () => {
           close: true
         }
       ]
-    })) === expectedVal, 'not passed :(');
-  });
-
-  it('should test _Function', () => {
-    const expectedVal = 'I am just a _Function'
-    assert(_Function() === expectedVal, 'failed :(');
+    })) === null, 'not passed :(');
   });
 });
+
+export default NavLayout;
+

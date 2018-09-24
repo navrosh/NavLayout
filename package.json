@@ -10,7 +10,7 @@
     "src"
   ],
   "scripts": {
-    "test": "npm run lint && npm run cover"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",
