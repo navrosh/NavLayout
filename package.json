@@ -2,12 +2,15 @@
   "name": "navlayout",
   "version": "1.0.1",
   "description": " javascript based powerful tabbed window, grid, dock engine which enables you to go beyond fixed layouts",
-  "main": "NavLayout.min.js",
+  "main": "./src/NavLayout.min.js",
   "directories": {
     "doc": "docs"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && npm run cover"
   },
   "repository": {
     "type": "git",
