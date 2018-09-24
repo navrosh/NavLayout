@@ -296,6 +296,10 @@
 
 
         nl.on('tabCreated', function (o) {
+
+            o._e.item.style.background = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+            //o._e.item.style.background = "#" + ("000000" + Math.floor(Math.random() * 0xFFFFFF).toString(16)).substr(-6);
+
             //console.log('tabCreated Event : ' + o);
             if (o.name == '3') {
                 var not = o._e.hd.tab.notif.add('end', '<div class="_notif_money" title="money.." ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Custom Event'); });
