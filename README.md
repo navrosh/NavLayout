@@ -1,5 +1,22 @@
 # NavLayout #  
-  
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+[![alt text][3.1]][3]
+[![alt text][4.1]][4]
+[![alt text][5.1]][5]
+
+[1.1]: http://i.imgur.com/tXSoThF.png (twitter)
+[2.1]: http://i.imgur.com/P3YfQoD.png (facebook)
+[3.1]: http://i.imgur.com/YckIOms.png (tumblr)
+[4.1]: http://i.imgur.com/1AGmwO3.png (dribbble)
+[5.1]: http://i.imgur.com/0o48UoR.png (github)
+
+[1]: http://www.twitter.com/NavLayout
+[2]: http://www.facebook.com/NavLayout
+[3]: http://navlayout.tumblr.com
+[4]: http://dribbble.com/NavLayout
+[5]: http://www.github.com/navrosh/NavLayout
+
 ### NavLayout is a pure javascript based powerful window / grid / dock engine which enables you to go beyond fixed layouts, designed for small size (55 kb), speed & flexibility. ###
 
 ![Screenshot](demo.gif)
@@ -53,6 +70,7 @@ NavLayout uses GitHub's issue tracker for enhancements and bugs. But please do c
 No external dependencies.
 
 ### Current / Future Work ###
+Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/navlayout) If this project help you reduce time to develop or you believe this could be helpful to others !
 
 * layout save and restore [ #### current ####]
 
@@ -217,4 +235,6 @@ No external dependencies.
 
 Documentation can be found in the doc folder of the project, or you can view it online here.
 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
 
