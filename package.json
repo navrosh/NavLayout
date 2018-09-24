@@ -1,0 +1,30 @@
+{
+  "name": "navlayout",
+  "version": "1.0.1",
+  "description": " javascript based powerful tabbed window, grid, dock engine which enables you to go beyond fixed layouts",
+  "main": "NavLayout.min.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navrosh/NavLayout.git"
+  },
+  "keywords": [
+    "\"dock",
+    "\"",
+    "\"grid\"",
+    "\"dock",
+    "window\"",
+    "\"tab\""
+  ],
+  "author": "Navneet Lal",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/navrosh/NavLayout/issues"
+  },
+  "homepage": "https://github.com/navrosh/NavLayout#readme"
+}
