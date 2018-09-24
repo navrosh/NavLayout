@@ -1,8 +1,9 @@
-import NavLayout from '../src/NavLayout.min.js';
+
+import NavLayout from '../src/js/NavLayout.min';
 
 describe('test', () => {
   it('test NavLayout initialization..', () => {
-    assert(NavLayout(JSON.stringify({
+    assert(NavLayout([{
       spliter: {
         areaSize: '9px',
         barSize: '8px'
@@ -22,7 +23,7 @@ describe('test', () => {
           close: true
         }
       ]
-    })) === null, 'not passed :(');
+    }]) === null, 'not passed :(');
   });
 });
 

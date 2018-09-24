@@ -10,8 +10,13 @@
     "src"
   ],
   "scripts": {
-    "test": "npm test"
+    "test": "mocha --compilers babel-register"
   },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/navrosh/NavLayout.git"
@@ -29,5 +34,9 @@
   "bugs": {
     "url": "https://github.com/navrosh/NavLayout/issues"
   },
-  "homepage": "https://github.com/navrosh/NavLayout#readme"
+  "homepage": "https://github.com/navrosh/NavLayout#readme",
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
 }
