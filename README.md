@@ -23,18 +23,6 @@
 
 [Live Demo](https://navrosh.github.io/NavLayout/)
 
-Why there was a need to write a plugin if there are already many similar plugins avaliable ? 
-
-Yes this is true that there are multiple dockable plugins like GoldenLayout (my favourite & inspiration), PhosphorJS, wcDocker, dockspawn or more BUT all avaliable plugins are either jquery dependent , bulky or have got limitions. 
-
-I was writing my very first commercial plugin and thought about extending the user experience by using dockable panels. I explored/implemented various plugins and got stuck !
-
-My requirements were simple -> a micro/lightweight dockable plugin + it should support every browser + fast + flexible
-
-So, i decided to write my OWN and being as an ordinary c++ developer there was a little learning curve to get used to javascript...
-
-I am looking for developers, testers, users feedback to extend the functionalities and bug fixing of navlayout. So, everyone is invited to make your navlayout plugin more usable.
-
 
 ### Some Possible Use Cases ###
 
