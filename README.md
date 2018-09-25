@@ -21,13 +21,18 @@
 
 ![Screenshot](images/img.png)
 [Live Demo](https://navrosh.github.io/NavLayout/)
-
-<br>
+<br><br>
 
 ### Some Possible Use Cases ###
 
-admin dashboard, email panels, financial application, anywhere where you want user the flexibility to design their own layout..
+ type  | detail 
+--- | --- 
+<img src="images/admin.png" width="50"> | ***Admin Dashboard*** : Admin dashboards are complex so why not giving user some gui flexibility to arrange his layout... 
+<img src="images/email.png" width="50"> | ***eMail Panels*** : Why not desktop like eMail applications for web ?
+<img src="images/finance.png" width="50"> | ***Financial Applications*** : It could help you to design a flexible portfolio, orderbook & order management system.
+<img src="images/random.png" width="50"> | ***Anywhere where you want user the flexibility to design their own layout..***
 
+<br>
 
 ### Some Key Points : ###
 
@@ -227,6 +232,7 @@ Documentation can be found in the doc folder of the project, or you can view it 
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
+
 
 
 
