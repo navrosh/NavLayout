@@ -18,12 +18,15 @@
 [5]: http://www.github.com/navrosh/NavLayout
 
 ### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window manager which enables you to go beyond fixed layouts, designed for low footprint (minified 55 kb, compressed 15 kb), no dependency, performance & flexibility. ###
+<br><br>
 
-![Screenshot](demo.gif)
+![Screenshot](img.png)
+
+<br>
 
 [Live Demo](https://navrosh.github.io/NavLayout/)
 
-
+<br><br>
 ### Some Possible Use Cases ###
 
 admin dashboard, email panels, financial application, anywhere where you want user the flexibility to design their own layout..
@@ -227,4 +230,5 @@ Documentation can be found in the doc folder of the project, or you can view it 
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
+
 
