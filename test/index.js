@@ -1,9 +1,14 @@
 
-import NavLayout from '../src/js/NavLayout.min';
+// import { NavLayout } from '../src/js/NavLayout';
+// export default NavLayout;
+import nl from '../src';
+//var _NavLayout = require('NavLayout');
 
+var _value;
 describe('test', () => {
-  it('test NavLayout initialization..', () => {
-    assert(NavLayout([{
+
+  it('Checking NavLayout initialization..', () => {
+    _value = nl.NavLayout({
       spliter: {
         areaSize: '9px',
         barSize: '8px'
@@ -23,9 +28,28 @@ describe('test', () => {
           close: true
         }
       ]
-    }]) === null, 'not passed :(');
+    });
+    console.log(_value);
+  });
+
+  it('adding a new Tab to NavLayout..', () => {
+    _value.addTab(
+      [
+        {
+          name: '32',
+          connect: null,
+          dock: 'right',
+          title: '32'
+        },
+        {
+
+          name: '33',
+          connect: null,
+          dock: 'right',
+          title: '33'
+        }
+      ]
+    )
   });
 });
-
-export default NavLayout;
 

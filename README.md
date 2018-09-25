@@ -17,7 +17,7 @@
 [4]: http://dribbble.com/NavLayout
 [5]: http://www.github.com/navrosh/NavLayout
 
-### NavLayout is a pure javascript based powerful window / grid / dock engine which enables you to go beyond fixed layouts, designed for small size (55 kb), speed & flexibility. ###
+### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window manager which enables you to go beyond fixed layouts, designed for low footprint (minified 55 kb, compressed 15 kb), no dependency, performance & flexibility. ###
 
 ![Screenshot](demo.gif)
 
