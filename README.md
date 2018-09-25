@@ -27,7 +27,8 @@
 
  type  | detail 
 --- | --- 
-<img src="images/admin.png" width="50"> | ***Admin Dashboard*** : Admin dashboards are complex so why not giving user some gui flexibility to arrange his layout... 
+<img src="images/web.png" width="50"> | ***Websites / eCommerce*** : Why not changing conventional design layouts like search boxes always on top, fixed main menus / header / footer ... in my views everything should be responsive, floatable, dockable as per user choice.. Don't you think so ?  
+<img src="images/admin.png" width="50"> | ***Admin Dashboard*** : Admin dashboards are complex so why not giving user some gui flexibility to arrange his layout like menu, widgets... 
 <img src="images/email.png" width="50"> | ***eMail Panels*** : Why not desktop like eMail applications for web ?
 <img src="images/finance.png" width="50"> | ***Financial Applications*** : It could help you to design a flexible portfolio, orderbook & order management system.
 <img src="images/random.png" width="50"> | ***Anywhere where you want user the flexibility to design their own layout..***
