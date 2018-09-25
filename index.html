@@ -17,23 +17,36 @@
     <![endif]-->
 
     <style>
+        body {
+            margin: 15px;
+            margin-top: 0px;
+            padding: 0;
+            background-color: #f5f5f54f; 
+        }
+
         .nav_container {
             background: #505050;
             background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#383838));
             background: -webkit-linear-gradient(top, #505050, #383838);
-            background: linear-gradient(to bottom, #505050, #383838);
+            background: linear-gradient(to bottom, #505050, #383838);            
         }
 
-        .btn {
-            padding: 10px;
-            margin: 10px; 
-        }
     </style>
 
 </head>
 
 <body>
-    <div id="_container" style="height:100%;width: 100%;padding: 10px;overflow: hidden;">
+
+    <div id="_container" style="height:100%;width: 100%;overflow: hidden;">
+        <div style="position:relative;height:24px;width:100%;overflow:hidden;margin-top:4px;">
+            <div style="position:relative;height:100%;overflow:hidden;float:left;font-size:small; ">
+                <b>NavLayout</b> - An Open Source Tabbed & Dockable Window Layout Manger
+            </div>
+            <div style="position:relative;height:100%;overflow:hidden;float:right;">
+                <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star"
+                    data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+            </div>
+        </div>
         <div class="nav_container" id="main_container" style="position: relative; height:100%;width:100%;overflow: hidden;">
 
         </div>
@@ -42,14 +55,16 @@
 
     <script src="src/js/NavLayout.min.js"></script>
 
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
     <script language="javascript" type="text/javascript">
 
         var nl = null, stack = null;;
         window.onresize = function (event) {
             var hgt = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             var wgt = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            document.getElementById('_container').style.height = ((hgt) - 38) + 'px';
-            document.getElementById('_container').style.width = ((wgt) - 38) + 'px';
+            document.getElementById('_container').style.height = ((hgt) - 15) + 'px';
+            document.getElementById('_container').style.width = ((wgt) - 30) + 'px';
             if (nl) nl.update();
         }
         window.onresize();
@@ -335,7 +350,7 @@
                 console.log('Creating Stack...');
                 stack = new NavLayout({
                     Config:
-                        JSON.stringify({
+                        [{
                             spliter: {
                                 areaSize: '9px',
                                 barSize: '8px'
@@ -345,7 +360,7 @@
                                 spacing: '1px'
                             },
                             data: []
-                        })
+                        }]
                     , ContainerObject: o._e.item
                 });
                 stack.addTab(
