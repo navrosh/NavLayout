@@ -17,7 +17,7 @@
 [4]: http://dribbble.com/NavLayout
 [5]: http://www.github.com/navrosh/NavLayout
 
-### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window manager which enables you to go beyond fixed layouts, designed for low footprint (minified 55 kb, compressed 15 kb), no dependency, performance & flexibility. ###
+### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window manager which enables you to go beyond fixed layouts, designed for low footprint, no dependency, high performance & flexibility. ###
 
 ![Screenshot](images/img.png)
 [Live Demo](https://navrosh.github.io/NavLayout/)
@@ -80,7 +80,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 
 * navlayout_theme_ext.js :  dynamic theme loading capability
 
-* change various logic to make the plugin even much smaller and faster.. probably less than 40 kbs, i wish i could get time to do so :-( 
+* change various logic to make the plugin even much smaller and faster.. i wish i could get time to do so :-( 
 
 * checking memory leaks / profiling
 
@@ -92,24 +92,41 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
             Config:
                 {
                     spliter: {
-                        areaSize: '9px', // Gap between splitter and the tabs
-                        barSize: '8px'
+                        areaSize: '9px', // Gap between two tabs
+                        barSize: '8px'   // size of splitter between gaps
                     },
                     tabs: {
-                        dragLockTime: 150,
-                        spacing: '1px'
+                        dragLockTime: 150, // docking start lock time in millisecs
+                        spacing: '1px'     // spacing between tabs when grouped together
                     }
-            data: [
+              data: [
                   {
+                      type: 'widget',     // tab, widget
+                      name: 'widget_1',
+                      connect: null,
+                      dock: 'float',      //top, bottom, left, right , headerLeft, headerRight, float 
+                      title: 'Widget',
+                      close: false,
+                      popout: 'parent',   // parent / window (requires security extension pack)                      
+                      dockable: false,
+                      resizable: false,
+                      top: "5%",         // px or %
+                      left: "80%",
+                      width: '150px',
+                      height: '150px'
+                  },            
+                  {
+                      type: 'tab',     
                       name: '0',
                       connect: null,
-                      dock: 'bottom',    // top, bottom, left, right , headerLeft, headerRight 
+                      dock: 'bottom',    
                       title: '0',
                       maximize: 'parent',
                       popout: 'parent',
                       close: true
                   },
                   {
+                      type: 'tab',
                       name: '1',
                       connect: null,
                       dock: 'bottom',
@@ -233,6 +250,7 @@ Documentation can be found in the doc folder of the project, or you can view it 
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
+
 
 
 
