@@ -31,6 +31,105 @@
             background: linear-gradient(to bottom, #505050, #383838);            
         }
 
+
+.circle, .squircle {
+  border-top: 0.1em solid rgba(255,255,255,0.4);
+  height: 4.5em;
+  position: absolute;
+  width: 4.5em;
+}
+.circle {
+  border-radius: 50%;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.5);
+  left: calc(50% - 2.3em);
+  top: calc(50% - 4.5em);
+  transform-origin: 50% 4.5em;
+}
+
+.one {
+  background: rgba(16, 63, 236, 0.75);
+  transform: rotateZ(225deg);
+}
+.two {
+  background: rgba(37, 172, 162, 0.75);
+  transform: rotateZ(180deg);
+}
+.three {
+  background: rgba(233, 124, 32, 0.75);
+  transform: rotateZ(135deg);
+}
+.four {
+  background: rgba(235, 67, 35, 0.75);
+  transform: rotateZ(90deg);
+}
+.five {
+  background: rgba(190, 28, 65, 0.75);
+  transform: rotateZ(45deg);
+}
+.six {
+  background: rgba(208, 57, 159, 0.75);
+  transform: rotateZ(0);
+}
+.seven {
+  background: rgba(150, 32, 198, 0.75);
+  transform: rotateZ(-45deg);
+}
+.eight {
+  background: rgba(95, 33, 203, 0.75);
+  transform: rotateZ(-90deg);
+}
+.squircle {
+  border-radius: 25%;
+}
+.small {
+  width: 4em;
+  height: 4em;
+  left: calc(50% - 2em);
+  top: calc(50% - 15em);
+  transform-origin: 50% 15em;
+  box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.2);
+}
+.small.squircle {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.small.squircle::after {
+  background: red;
+  border-radius: 25%;
+  box-shadow: -0.25em 0.25em 0.5em rgba(0,0,0,0.2);
+  content: "";
+  height: 100%;
+  position: absolute;
+  transform: rotateZ(-45deg);
+  width: 100%;
+}
+
+.small.squircle.two::after {
+  background: rgba(37, 172, 162, 0.75);
+}
+.small.squircle.four::after {
+  background: rgba(235, 67, 35, 0.75);
+}
+.small.squircle.six::after {
+  background: rgba(208, 57, 159, 0.75);
+}
+.small.squircle.eight::after {
+  background: rgba(95, 33, 203, 0.75);
+}
+.large.squircle {
+  
+  border: none;
+  height: 4.5em;
+  left: calc(50% - 2.1em);
+  position: absolute;
+  top: calc(50% - 2.1em);
+  transform: none;
+  width: 4.4em;
+      cursor: pointer; 
+background-image: url(data:image/png;base64,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);
+}
+
     </style>
 
 </head>
@@ -80,9 +179,24 @@
             },
             data: [
                 {
+                    name: 'widget',
+                    connect: null,
+                    dock: 'float',      //top, bottom, left, right , headerLeft, headerRight, float 
+                    title: 'Widget',
+                    close: false,
+                    popout: 'parent',   // parent / window (requires extension pack)
+                    type: 'widget',     // tab, widget
+                    dockable: false,
+                    resizable: false,
+                    top: "5%",         // px or %
+                    left: "80%",
+                    width: '150px',
+                    height: '150px'
+                },
+                {
                     name: '0',
                     connect: null,
-                    dock: 'bottom',    //top, bottom, left, right , headerLeft, headerRight 
+                    dock: 'bottom',    //top, bottom, left, right , headerLeft, headerRight, float 
                     title: '0',
                     maximize: 'parent',
                     popout: 'parent',
@@ -92,7 +206,9 @@
                     name: '1',
                     connect: null,
                     dock: 'bottom',
-                    title: '1'
+                    title: 'Widget',
+                    popout: 'parent',
+                    type: 'widget' // tab, widget
                 },
                 {
                     name: '2',
@@ -314,7 +430,12 @@
             //o._e.item.style.background = "#" + ("000000" + Math.floor(Math.random() * 0xFFFFFF).toString(16)).substr(-6);
 
             //console.log('tabCreated Event : ' + o);
-            if (o.name == '3') {
+            if (o.name == 'widget') {
+                o._e.item.style.filter = 'none'; o._e.item.style.boxShadow = 'none'; o._e.item.style.background = 'transparent';
+                o._e.item.innerHTML = '<div style="position:relative;height:100%;width:100%;"><div class="large circle one"></div><div class="large circle two"></div><div class="large circle three"></div><div class="large circle four"></div><div class="large circle five"></div><div class="large circle six"></div><div class="large circle seven"></div><div class="large circle eight"></div><a href="https://github.com/navrosh/NavLayout"><div class="large squircle one" style="background:#1c1f24;"></div><div class="large squircle github_star"></div></a></div>';
+
+            }
+            else if (o.name == '3') {
                 var not = o._e.hd.tab.notif.add('end', '<div class="_notif_money" title="money.." ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Custom Event'); });
                 o._e.hd.tab.notif.o.style.border = 'none';
                 o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
@@ -438,6 +559,10 @@
             //console.log('Minimize Event : ' + e + ', name:' + n + ', object:' + o.item);
         });
         nl.on('maximize', function (e, o) {
+            //console.log('Maximize Event : ' + e + ', name:' + n + ', object:' + o.item);
+            //e.preventDefault();
+        });
+        nl.on('floatingWindowResize', function (e, o) {
             //console.log('Maximize Event : ' + e + ', name:' + n + ', object:' + o.item);
             //e.preventDefault();
         });
