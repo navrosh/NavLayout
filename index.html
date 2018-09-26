@@ -436,9 +436,9 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
 
             }
             else if (o.name == '3') {
-                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_money" title="money.." ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Custom Event'); });
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_money" data-title="money.." ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Custom Event'); });
                 o._e.hd.tab.notif.o.style.border = 'none';
-                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
+                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" data-title="close" ></li>', function (ev, nl, tab, obj) {
                     nl.emit('close', ev, tab);
                     if (ev.defaultPrevented == false) {
                         nl.deleteTab(tab);
@@ -446,7 +446,7 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
                 });
             }
             else if (o.name == '25') {
-                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" title="close" ></li>', function (ev, nl, tab, obj) {
+                o._e.hd.tab.ctl.add('end', '<li class="_nl_close" data-title="close" ></li>', function (ev, nl, tab, obj) {
                     nl.emit('close', ev, tab);
                     if (ev.defaultPrevented == false) {
                         nl.deleteTab(tab);
@@ -454,16 +454,16 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
                 });
             }
             else if (o.name == '11') {
-                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_counter" title="counter" ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Count : ' + obj.innerHTML); });
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_counter" data-title="counter" ></div>', function (ev, nl, tab, obj) { alert(tab.name + ' @ Count : ' + obj.innerHTML); });
                 not.innerHTML = 10; setInterval(function () { var cnt = parseInt(not.innerHTML) + 1; if (cnt > 99) cnt = 10; not.innerHTML = cnt; }, 500);
             }
             else if (o.name == '8') {
                 o._e.hd.tab.notif.o.style.border = 'none';
-                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_health" title="health.." ></div>', function (ev, nl, tab, obj) { alert(tab.name); });
+                var not = o._e.hd.tab.notif.add('end', '<div class="_notif_health" data-title="health.." ></div>', function (ev, nl, tab, obj) { alert(tab.name); });
                 var opa = 0.0, _m = 1; setInterval(function () { opa = opa + 0.05 * _m; not.style.opacity = opa; not.style.filter = 'alpha(opacity=' + opa * 100 + ")"; not.style.MozOpacity = opa; not.style.KhtmlOpacity = opa; if (opa >= 1) _m = -1; else if (opa <= 0) _m = 1; }, 60);
             }
             else if (o.name == "27") {
-                o._e.hd.tab.notif.add('end', '<div class="_notif_bell" title="delivery locations.." ></div>', function (ev, nl, tab, obj) { alert('Kindly post all bugs into google group..'); });
+                o._e.hd.tab.notif.add('end', '<div class="_notif_bell" data-title="delivery locations.." ></div>', function (ev, nl, tab, obj) { alert('Kindly post all bugs into google group..'); });
                 o._e.hd.tab.notif.o.style.border = 'none';
             }
             else if (o.name == '4') {

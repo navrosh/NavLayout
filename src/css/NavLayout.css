@@ -622,7 +622,7 @@ border-bottom-left-radius: 3px;
 }
 
 ._nl_notif ._notif_bell{
-    opacity: 1;
+    opacity: 0.8;
     margin-left: -1px;
     margin-top: 5px;
     width:15px;
@@ -631,7 +631,7 @@ border-bottom-left-radius: 3px;
 }
 
 ._nl_notif ._notif_bell:hover {
-     opacity:0.5; 
+     opacity:1; 
      transition: opacity 200ms ease;
 }
 
@@ -664,3 +664,43 @@ border-bottom-left-radius: 3px;
     border-bottom: 2px solid rgb(0, 0, 0);  
     border-right: 2px solid rgb(0, 0, 0);  
 }
+
+*[data-title]:hover:before {
+ box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.836);
+ filter: blur(10px);
+ -moz-filter   : blur(10px);
+ -webkit-filter: blur(10px);
+ -o-filter     : blur(10px); 
+ -ms-filter: blur(10px);
+}
+
+*[data-title]:hover:after 
+{  
+  content: attr(data-title);  
+  padding: 3px 8px;  
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 255, 255);  
+  position: absolute;  
+  z-index: 9999;
+  left: 50%;  
+  top: 140%;  
+  white-space: nowrap;  
+  z-index: 20px;  
+  -moz-border-radius: 5px;  
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;    
+  -moz-box-shadow: 0px 0px 4px #222;  
+  -webkit-box-shadow: 0px 0px 4px #222;  
+  box-shadow: 0px 0px 4px #222;  
+  background-image: -moz-linear-gradient(top, #636363, #161616);  
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #636363),color-stop(1,#161616));  
+  background-image: -webkit-linear-gradient(top, #636363, #161616);  
+  background-image: -moz-linear-gradient(top, #636363, #161616);  
+  background-image: -ms-linear-gradient(top, #636363, #161616);  
+  background-image: -o-linear-gradient(top, #636363, #161616);  
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 0.7;
+    transition: opacity 300ms ease;  
+}  
