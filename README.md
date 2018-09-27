@@ -68,7 +68,13 @@ No external dependencies.
 ### Current / Future Work ###
 Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/navlayout) If this project help you reduce time to develop or you believe this could be helpful to others !
 
-* layout save and restore [ #### current ####]
+* stack : a netsing stacking of elements where in or out from any direction withing navlayout would be possible [ #### current ####]
+
+* listHorizontal : a horizontal list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', searchBox :true
+
+* listVertical : a vertical list drag & drop navlayout objects with scrolling. Options will include boxSize, scrollType, searchBox
+
+* layout save and restore 
 
 * api documentation & proper comments
 
@@ -76,7 +82,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 
 * navlayout_popout_ext.js : will enable tab pop out as a new window by using security protocol 
 
-* navlayout_widgets_ext.js 
+* navlayout_design_framework : a tool to generate navlayout without coding, features would include : predefined community themes and layouts for various domains (finance, trading, eCommerce ..), saving/editing themes and layout, exporting as various cms plugins like wordpress, joomla, drupal, etc..
 
 * navlayout_theme_ext.js :  dynamic theme loading capability
 
@@ -101,7 +107,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
                     }
               data: [
                   {
-                      type: 'widget',     // tab, widget
+                      type: 'widget',     // tab, widget, listHorizontal, listVertical, stack
                       name: 'widget_1',
                       connect: null,
                       dock: 'float',      //top, bottom, left, right , headerLeft, headerRight, float 
@@ -250,6 +256,7 @@ Documentation can be found in the doc folder of the project, or you can view it 
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
+
 
 
 
