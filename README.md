@@ -70,9 +70,9 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 
 * stack : a netsing stacking of elements where in or out from any direction withing navlayout would be possible [ #### current ####]
 
-* listHorizontal : a horizontal list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', searchBox :true
+* listHorizontal : a horizontal list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', toolBox: true (for filtering the list)
 
-* listVertical : a vertical list drag & drop navlayout objects with scrolling. Options will include boxSize, scrollType, searchBox
+* listVertical : a vertical list drag & drop navlayout objects with scrolling. Options will include boxSize, scrollType, toolBox
 
 * layout save and restore 
 
@@ -256,6 +256,7 @@ Documentation can be found in the doc folder of the project, or you can view it 
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/navlayout)
+
 
 
 
