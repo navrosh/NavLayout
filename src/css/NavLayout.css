@@ -112,11 +112,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   background: linear-gradient(to bottom, #505050, #383838);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );  */
 
-  border-top: 1px solid black;
+  /* border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-radius: 3px 2px 0 0;
   -webkit-box-shadow: inset 0 1px 0 #020202,0 2px 2px rgba(0,0,0,0.4);
-  box-shadow: inset 0 1px 0 #6e6e6e,0 2px 2px rgba(0,0,0,0.4);
+  box-shadow: inset 0 1px 0 #6e6e6e,0 2px 2px rgba(0,0,0,0.4); */
 
     
     
@@ -124,7 +124,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
      border-bottom: none; 
      border-left: none;  */
 }
-
+/* 
 ._nl_tab:before{
  content: '';
  background: inherit; 
@@ -139,7 +139,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
  -webkit-filter: blur(15px);
  -o-filter     : blur(15px);
  -ms-filter: blur(15px); 
-}
+} */
 
 ._nl_header ._nl_tab {    
     display: -webkit-inline-flex;
@@ -148,7 +148,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
     /* touch-action: manipulation; */
     font-family: Arial, sans-serif;
     font-size: 10px;
-    color: rgb(54, 187, 187);
+    font-weight: bold;
+    /* color: rgb(54, 187, 187); */
+    color: black;
 
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
 background: rgb(69,72,77);
@@ -156,13 +158,13 @@ background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); 
 background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    
+ box-shadow: inset 0 0 0 3000px rgba(163, 163, 163, 0.80);   
      border: 2px solid #0e0d0d;  
-    border-radius: 2px 2px 0 0;
+    border-radius: 5px 5px 0 0;
     cursor: move;
     
     /* font-weight: bold; */
-    padding: 2px 10px 7px;     
+    padding: 2px 15px 7px;     
      border-bottom: none;  
     
 }
@@ -180,7 +182,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 }
 
 ._nl_header ._nl_tab_hover {
-    color: #a5a328;
+    color: #ffffff;
     /* height:100%; */
     font-family: Arial, sans-serif;
     /* font-size: 0.64em;    */
@@ -252,29 +254,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
  background: inherit; 
  box-shadow: inset 0 0 0 3000px rgba(131, 131, 131, 0.836); */
 
-  content: “ ”;
- background: inherit; 
+  /* content: “ ”;
+ background: inherit;  */
  box-shadow: inset 0 0 0 3000px rgba(163, 163, 163, 0.80);
- filter: blur(20px); 
+ /* filter: blur(20px); 
  -moz-filter   : blur(20px);
  -webkit-filter: blur(20px); 
  -o-filter     : blur(20px); 
--ms-filter: blur(20px);
+-ms-filter: blur(20px); */
+
     border: 2px solid black;  
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px 5px 5px 5px;
      /*border-top: none; */
 }
- ._nl_item:hover {
+ /* ._nl_item:hover {
  content: “ ”;
  background: inherit; 
- /* box-shadow: inset 0 0 0 3000px rgba(163, 163, 163, 0.836); */
  box-shadow: inset 0 0 0 3000px rgba(176, 176, 176, 0.80);
  filter: blur(20px);
  -moz-filter   : blur(20px);
  -webkit-filter: blur(20px);
  -o-filter     : blur(20px);  
   -ms-filter: blur(20px);
-}
+} */
 
 ._nl_header ._nl_tab ._nl_title {
     padding-top:  2px;
