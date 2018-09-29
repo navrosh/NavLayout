@@ -107,7 +107,7 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
                     }
               data: [
                   {
-                      type: 'widget',     // tab, widget, list, stack or custom types [ by exteding navlayout types ]
+                      type: 'widget',     // tab, widget, list, stack or custom types [ by extending navlayout types ]
                       name: 'widget_1',
                       connect: null,
                       dock: 'float',      //top, bottom, left, right , headerLeft, headerRight, float 
