@@ -547,7 +547,7 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
         });
         nl.on('resized', function (o) {
             //console.log('Resized Event : ' + n + ', object:' + o.item);
-            if (o.uData.os) {
+            if (o.uData && o.uData.os) {
                 o.uData.os.style.height = (o._e.item.offsetHeight - 15) + 'px';
                 o.uData.os.style.width = (o._e.item.offsetWidth - 15) + 'px';
                 o.uData.stack.update();
