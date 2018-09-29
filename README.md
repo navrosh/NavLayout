@@ -17,7 +17,7 @@
 [4]: http://dribbble.com/NavLayout
 [5]: http://www.github.com/navrosh/NavLayout
 
-### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window manager which enables you to go beyond fixed layouts, designed for low footprint, no dependency, high performance & flexibility. ###
+### [NavLayout](https://navrosh.github.io/NavLayout/) is a pure javascript based powerful tabbed and dockable window framework which enables you to go beyond fixed layouts, designed for low footprint, no dependency, high performance & flexibility. ###
 
 ![Screenshot](images/img.png)
 [Live Demo](https://navrosh.github.io/NavLayout/)
