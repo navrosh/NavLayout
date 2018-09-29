@@ -70,9 +70,9 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 
 * stack : a netsing stacking of elements where in or out from any direction within navlayout would be possible [ #### current ####]
 
-* listHorizontal : a horizontal list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', toolBox: true (for filtering the list)
+* list : a horizontal/Vertical list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', toolBox: true (for filtering the list & switching between vertical or horizontal mode)
 
-* listVertical : a vertical list drag & drop navlayout objects with scrolling. Options will include boxSize, scrollType, toolBox
+* Custom extension development & hooking / extending NavLayout object types (e.g: like a table supporting drag & drop of it cells to/from navlayout.. ahh.. that would be real fun !)
 
 * layout save and restore 
 
