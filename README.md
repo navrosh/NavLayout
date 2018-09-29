@@ -68,7 +68,7 @@ No external dependencies.
 ### Current / Future Work ###
 Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/navlayout) If this project help you reduce time to develop or you believe this could be helpful to others !
 
-* stack : a netsing stacking of elements where in or out from any direction withing navlayout would be possible [ #### current ####]
+* stack : a netsing stacking of elements where in or out from any direction within navlayout would be possible [ #### current ####]
 
 * listHorizontal : a horizontal list of drag & drop navlayout objects with scrolling. Options will include boxSize:'50px', scrollType:'button/bar', toolBox: true (for filtering the list)
 
