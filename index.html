@@ -165,6 +165,7 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
             var wgt = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             document.getElementById('_container').style.height = ((hgt) - 15) + 'px';
             document.getElementById('_container').style.width = ((wgt) - 30) + 'px';
+            document.getElementById('main_container').style.height = (((hgt) - 15) - 28) + 'px';
             if (nl) nl.update();
         }
         window.onresize();
@@ -464,26 +465,26 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
             }
             else if (o.name == '4') {
                 return;
-                console.log('Creating Stack...');
-                stack = new NavLayout({
+                o.uData.os = document.createElement('div'); o.uData.os.style.cssText = 'display:block;position:absolute;border:0;margin-top:5px;margin-left:5px;width:' + (o._e.item.offsetWidth - 15) + 'px;height:' + (o._e.item.offsetHeight - 15) + 'px;'; o._e.item.appendChild(o.uData.os);
+
+                o.uData.stack = new NavLayout({
                     Config:
-                        [{
-                            spliter: {
-                                areaSize: '9px',
-                                barSize: '8px'
-                            },
-                            tabs: {
-                                dragLockTime: 150,
-                                spacing: '1px'
-                            },
-                            data: []
-                        }]
-                    , ContainerObject: o._e.item
+                    {
+                        spliter: {
+                            areaSize: '9px',
+                            barSize: '8px'
+                        },
+                        tabs: {
+                            dragLockTime: 150,
+                            spacing: '1px'
+                        },
+                        data: []
+                    }
+                    , ContainerObject: o.uData.os
                 });
-                stack.addTab(
+                o.uData.stack.addTab(
                     [
                         {
-
                             name: '32',
                             connect: null,
                             dock: 'right',
@@ -546,7 +547,11 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYA
         });
         nl.on('resized', function (o) {
             //console.log('Resized Event : ' + n + ', object:' + o.item);
-            if (stack) stack.update();
+            if (o.uData.os) {
+                o.uData.os.style.height = (o._e.item.offsetHeight - 15) + 'px';
+                o.uData.os.style.width = (o._e.item.offsetWidth - 15) + 'px';
+                o.uData.stack.update();
+            }
         });
         nl.on('popout', function (e, o) {
             //console.log('Popout Event : ' + e + ', name:' + n + ', object:' + o.item);
