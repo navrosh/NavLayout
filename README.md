@@ -91,6 +91,84 @@ Kindly [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https:/
 * checking memory leaks / profiling
 
 ## Usage ##
+# Structure
+
+a NavLayout component is a set of different DOM elements and when you create a component the whole set of element as a pack is provided to you along with the component object. This is important because if you have direct access to html DOM objects its upto you what you want to do further. You can change classes / innerHTML, ids, bind functions or anything else..
+
+a NavLayout object after its creation consists below description and will be used for any type of TO / FROM communication.
+
+```javascript
+ nlObject = {
+	name: null,
+	type: '-', 
+	o: null, 
+	_e: { 
+		hdr: { 
+			o: null,
+			tab: {
+				o: null, 
+				title: null, 
+				notif: _controls, 
+				ctl: _controls 
+			}, 
+			mid: null, 
+			ctl: _controls 
+		}, 
+		item: null 
+	},
+        H: 0,
+	W: 0,
+	T: 0, 
+	L: 0, 
+	uData: {},
+	_p: null
+  };
+
+```
+> kindly refer to CONTROLS sections for more details
+
+parameter	|  access	| type		| 	Description
+----------------|---------------|---------------|-----------------------------
+name		| Read Only	| string 	| This is user defined unique id of the component provided during its creation
+type		| Read Only	| string 	| values as 'E' , 'V', 'H', 'G'  [ where E = component, V = Vertical Splitter, H = Horizontal Splitter, G = Group of Components ]
+_e		| Read/Write	| object	| _e object is a set of <b>HEADER</b> definition and <b>ITEM</b> body. 
+H		| Read Only	| floating 	| height of the component relative to the root container
+W		| Read Only	| floating 	| width of the component relative to the root container
+T		| Read Only	| floating 	| top position of the component relative to the root container
+L		| Read Only	| floating 	| left position of the component relative to the root container
+uData		| Read/Write	| object	| component's user defined multipurpose custom data storage inside this object. 
+o		| Read Only	| object	| html DOM div object of the component
+_p		| Read Only	| object	| component's parent NavLayout object, useful in case of Stacking or Nesting within NavLayout
+
+
+<br>
+<b>`description of _e.hdr.{elements} : HEADER`</b>
+
+parameter	| type		| 	Description
+----------------|---------------|---------------|-----------------------------
+o		| object	| html DOM div object of HEADER
+tab		| object 	| set of html DOM objects, tab controls & functions of the header TAB area.
+mid		| object	| html DOM object of the spacing between tab and header control (check for examples for its usage)
+ctl		| object	| header control's html DOM div and access to default controls like close, maximize, popout and user defined header controls. Kindly refer to CONTROLS.
+
+<br>
+<b>`description of _e.hdr.tab.{elements} : HEADER`</b>
+
+parameter	| type		| 	Description
+----------------|---------------|---------------|-----------------------------
+o		| object	| html DOM div object of TAB section
+title		| object 	| html DOM div object of tab title.
+notif		| object	| tab notification html DOM and access to user defined funtions and events. KindlyKindly refer to CONTROLS.
+ctl		| object	| tab's html DOM and access to user defined tab controls. Kindly refer to CONTROLS.
+
+
+<br>
+<b>`description of _e.item : ITEM`</b>
+
+ type		| 	Description
+----------------|-----------------------------
+object		| html DOM div object which will be used for displaying user data as any third party plugin, tables, pages, divs, etc...
+
 
 ### Adding Tabs Using Config ###
 
